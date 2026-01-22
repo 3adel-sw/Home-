@@ -29,88 +29,140 @@
   </head>
   <body>
     <!-- Start Page Header  -->
-    <header class="w-full p-4 relative ">
-      <div class="relative mx-6 flex items-center justify-between rounded-full">
+    <header class="w-full p-4 relative z-50">
+      <div class="mx-6 flex items-center justify-between">
         <!-- Logo -->
-        <img
-          src="../src/image/logo.png"
-          alt="logo"
-          loading="lazy"
-        />
-          <!-- center -->
-          <div 
-  x-data="{ open: false }"
-  x-effect="document.body.classList.toggle('overflow-hidden', open)"
-  class="relative"
->
+        <img src="../src/image/logo.png" alt="logo" class="" />
 
-  <!-- Menu Button -->
-  <button @click="open = true" class="">
-    <img 
-      src="../src/image/menu.png"
-      class="cursor-pointer"
-      loading="lazy"
-      alt="menu"
-    >
-  </button>
+        <!-- Menu -->
+        <div
+          x-data="{ open: false }"
+          x-effect="document.body.classList.toggle('overflow-hidden', open)"
+          class="relative"
+        >
+          <!-- Menu Button -->
+          <button @click="open = true">
+            <img src="../src/image/menu.png" class="md:ml-12" alt="menu" />
+          </button>
 
-  <!-- Backdrop -->
-  <div 
-    x-show="open"
-    x-transition.opacity
-    @click="open = false"
-    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
-  ></div>
-
-  <!-- Slide Menu -->
-  <nav
-    x-show="open"
-    x-transition:enter="transition transform duration-300 ease-out"
-    x-transition:enter-start="translate-x-full"
-    x-transition:enter-end="translate-x-0"
-    x-transition:leave="transition transform duration-300 ease-in"
-    x-transition:leave-start="translate-x-0"
-    x-transition:leave-end="translate-x-full"
-    class="fixed top-0 right-0 h-full w-[280px]
-           bg-[#101010] border-l border-gray-800
-           z-50 p-6 flex flex-col"
-  >
-
-    <!-- Close Button -->
-    <button 
-      @click="open = false"
-      class="self-end text-gray-400 hover:text-white transition"
-    >
-      ✕
-    </button>
-
-    <!-- Links -->
-    <div class="mt-10 flex flex-col gap-6 text-gray-400">
-    <a href="../index.html" class="hover:text-white transition">Home</a>
-        <a href="about.html" class="hover:text-white transition">About</a>
-        <a href="academy.html" class="hover:text-white transition">Academy</a>
-        <a href="services.html" class="hover:text-white transition">Services</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
-    </div>
-
-  </nav>
-
-
-</div>
-
-        <div class=" items-center gap-3">
-          <a
-            class=" flex  items-center text-center  "
-            href="#"
+          <!-- FULL SCREEN MENU -->
+          <div
+            x-show="open"
+            x-transition.opacity
+            class="fixed inset-0 bg-gradient-to-br from-[#0e0e14] to-[#15151f] z-50 flex items-center justify-center"
+          >
+            <!-- Box -->
+            <div
+              class="relative w-full h-full bg-gradient-to-br from-[#0e0e14] to-[#15151f] p-10 flex flex-col"
             >
-            <button class="btn btn-gradient btn-accent w-[235px] h-[45px] rounded-3xl text-white">Back A Consultatino</button>
-            </a>
+              <!-- Top Bar -->
+              <div
+                class="flex items-center md:mx-24 mx-auto md:gap-0 gap-6 justify-between"
+              >
+                <img src="../src/image/logo.png" class="" alt="logo" />
+
+                <button @click="open = false" class="text-white text-xl">
+                  <img
+                    src="../src/image/menu.png"
+                    class="md:ml-20"
+                    alt="menu"
+                  />
+                </button>
+
+                <a class="flex items-center text-center" href="#">
+                  <button
+                    class="btn btn-gradient btn-accent bg-[#14CF93] md:w-[235px] md:h-[45px] h-[30px] w-[180px] rounded-3xl text-white"
+                  >
+                    Book A Consultation
+                  </button>
+                </a>
+              </div>
+
+              <!-- Center Menu -->
+              <div
+                class="m-auto w-[85%] h-[45%] top-20 flex items-center justify-center -translate-y-8 border border-[#232323] rounded-2xl bg-gradient-to-br from-[#0e0e14] to-[#15151f]"
+              >
+                <nav
+                  class="text-center space-y-4 text-white text-xl md:text-2xl font-medium"
+                >
+                  <a href="../index.html" class="block hover:text-[#14CF93]"
+                    >HOME</a
+                  >
+                  <a href="about.html" class="block hover:text-[#14CF93]"
+                    >ABOUT</a
+                  >
+                  <a href="projects.html" class="block hover:text-[#14CF93]"
+                    >PROJECTS</a
+                  >
+                  <a href="services.html" class="block hover:text-[#14CF93]"
+                    >SERVICES</a
+                  >
+                  <a href="academy.html" class="block hover:text-[#14CF93]"
+                    >ACADEMY</a
+                  >
+                  <a href="blog.html" class="block hover:text-[#14CF93]"
+                    >BLOGS & NEWS</a
+                  >
+                  <a href="contact.html" class="block text-[#14CF93]"
+                    >CONTACT</a
+                  >
+                </nav>
+              </div>
+
+              <!-- Bottom -->
+              <div
+                class="flex items-end justify-between md:mx-24 m-auto md:gap-0 gap-6 mb-12"
+              >
+                <!-- Social -->
+                <div class="flex gap-3">
+                  <a
+                    class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center cursor-pointer opacity-75 hover:opacity-100"
+                    >in</a
+                  >
+                  <a
+                    class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center cursor-pointer opacity-75 hover:opacity-100"
+                    >𝕏</a
+                  >
+                  <a
+                    class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center cursor-pointer opacity-75 hover:opacity-100"
+                    >◎</a
+                  >
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex gap-3 flex-col md:flex-row">
+                  <a class="flex items-center text-center" href="#">
+                    <button
+                      class="btn btn-gradient btn-accent bg-[#14CF93] md:w-[235px] md:h-[45px] h-[30px] w-[180px] rounded-3xl text-white"
+                    >
+                      Start a New Project
+                    </button>
+                  </a>
+                  <a class="flex items-center text-center" href="#">
+                    <button
+                      class="btn btn-gradient btn-accent bg-white! border-white/20! md:w-[235px] md:h-[45px] h-[30px] w-[180px] rounded-3xl text-black"
+                    >
+                      Book Appointment
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Button -->
+        <a class="flex items-center text-center" href="#">
+          <button
+            class="btn btn-gradient btn-accent bg-[#14CF93] md:w-[235px] md:h-[45px] h-[30px] w-[180px] rounded-3xl text-white"
+          >
+            Book Appointment
+          </button>
+        </a>
       </div>
     </header>
     <!-- End Page Header  -->
-     <main>
-      
-     </main>
+    <main></main>
     <!-- Start Footer -->
     <footer class="w-full mx-auto">
       <hr class="py-8 w-full h-0.5" />
@@ -118,17 +170,27 @@
         <div class="flex items-center mx-8 justify-between">
           <!-- Logo -->
           <div class="flex items-center gap-2 w-40 text-lg font-medium">
-            <img src="../src/image/logo-bottom.png" class="w-full h-full" alt="" />
+            <img
+              src="../src/image/logo-bottom.png"
+              class="w-full h-full"
+              alt=""
+            />
           </div>
 
           <!-- Navigation -->
           <nav class="hidden md:flex gap-8 text-base text-gray-400">
-        <a href="../index.html" class="hover:text-white transition">Home</a>
-        <a href="about.html" class="hover:text-white transition">About</a>
-        <a href="academy.html" class="hover:text-white transition">Academy</a>
-        <a href="services.html" class="hover:text-white transition">Services</a>
-        <a href="contact.html" class="hover:text-white transition">Contact</a>
-      </nav>
+            <a href="../index.html" class="hover:text-white transition">Home</a>
+            <a href="about.html" class="hover:text-white transition">About</a>
+            <a href="academy.html" class="hover:text-white transition"
+              >Academy</a
+            >
+            <a href="services.html" class="hover:text-white transition"
+              >Services</a
+            >
+            <a href="contact.html" class="hover:text-white transition"
+              >Contact</a
+            >
+          </nav>
 
           <!-- Right action -->
           <div class="flex items-center gap-4">
