@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOGS & NEWS Page</title>
+    <title>Page Blogs Details </title>
     <link rel="stylesheet" href="../style.css" />
     <link href="../src/output.css" rel="stylesheet" />
     <!-- Performance: Preconnect to CDN domains -->
@@ -17,7 +17,7 @@
       as="style"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
-    <!-- Font -->
+      <!-- Font -->
     <link
       rel="stylesheet"
       href="../src/fonts/fonnts.com-Degular_Variable.otf"
@@ -170,38 +170,132 @@
     </header>
     <!-- End Page Header  -->
     <main>
-      <!-- Start Section Blogs Activites -->
-      <section id="blogs" class="w-[85%] mx-auto md:mt-32 mt-16 z-20 relative">
-        <div class="head-about mt-16 mb-6 text-center md:w-[40%] mx-auto">
+      <!-- Start Details Section -->
+       <section id="details" class="details w-[85%] md:py-12 py-8 mx-auto mt-10">
+         <!-- header  -->
+          <div class=" px-2 mt-16 mb-6 text-start"> 
+            <div class="flex justify-between items-center">
+            <span class="flex flex-row text-sm text-white gap-3 items-center">
+                <h1>
+                  UX Design 
+                </h1>
+                <h2>
+                .  19 Jan 2024
+                </h2>
+              </span>
+              <img src="../src/image/vector.svg" alt="">
+            
+          </div>
+            </div>
+              <h3 class=" text-white md:text-4xl text-start font-semibold text-base  md:mb-12">
+                The Psychology Behind UX Design
+          </h3>
+        </div>
+         <!-- Details Image -->
+        <div class="details-image w-full">
+          <img
+            src="../src/image/blogs-details.png"
+            class="w-full h-full object-fill"
+            alt="blog-details"
+          />
+        </div>
+        <!-- Details Text -->
+<div class=" mx-auto text-start mt-10 space-y-12">
+
+    <!-- Section 1 -->
+    <div class="space-y-6">
+      <h1 class="text-2xl md:text-3xl font-semibold leading-tight">
+        Team Identifiers, Benefits, and How to Build One that Works
+      </h1>
+
+      <p class="text-gray-400 leading-relaxed ">
+        Bring to the table win survival strategies to ensure proactive domination
+        at the end of the day going forward a new normal that has evolved from
+        generation on the runway heading towards a streamlined cloud solution
+        user generated content in real time will have multiple touchpoints.
+      </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="space-y-8">
+      <h2 class="text-2xl md:text-3xl font-semibold">
+        The Work & Life Style For All
+      </h2>
+
+      <p class="text-gray-400 leading-relaxed max-w-4xl">
+        Bring to the table win survival strategies to ensure proactive domination
+        at the end of the day going forward a new normal that has evolved from
+        generation on the runway heading towards a streamlined cloud solution.
+      </p>
+
+      <p class="text-gray-400 leading-relaxed max-w-4xl">
+        Bring to the table win survival strategies to ensure proactive domination
+        at the end of the day going forward a new normal that has evolved from
+        generation on the runway heading towards a streamlined cloud solution.
+      </p>
+
+      <!-- Bullet list -->
+      <ul class="space-y-3 text-gray-300 mx-4 list-disc list-inside">
+        <li>Dynamically target high-payoff intellectual capital for customized</li>
+        <li>Interactively procrastinate high-payoff content</li>
+        <li>Credibly reintermediate backend ideas for cross-platform models</li>
+      </ul>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="space-y-8">
+      <h2 class="text-2xl md:text-3xl font-semibold">
+        The Work & Life Style For All
+      </h2>
+
+      <p class="text-gray-400 leading-relaxed max-w-4xl">
+        Bring to the table win survival strategies to ensure proactive domination
+        at the end of the day going forward a new normal that has evolved from
+        generation on the runway heading towards a streamlined cloud solution.
+      </p>
+
+      <!-- Numbered list -->
+      <ol class="space-y-4 text-gray-300 list-decimal list-inside">
+        <li>
+          It brings the right people together with all the right information and tools to get work done
+        </li>
+        <li>
+          We provide operational efficiency, data security, and flexible scale
+        </li>
+        <li>
+          Your best work, together in one package that works seamlessly from your computer
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+       </section>
+      <!-- End Details Section -->
+
+
+
+
+      <!-- Start Section Blogs Details -->
+      <section
+        id="blogs-details"
+        class="w-[85%] mx-auto md:mt-32 mt-16 z-20 relative"
+      >
+        <div class="mt-16 mb-1 text-start mx-auto">
           <h1 class="md:text-4xl text-3xl p-2 font-bold md:p-6 text-white">
             Blogs & Resources
           </h1>
-          <p class="text-gray-400 md:text-base text-sm px-2 md:mb-12">
-            I offer a complete education system for designers centered around
-            two main products: Course
-          </p>
         </div>
-        <div class="flex justify-center my-8 flex-col sm:flex-row gap-5 mt-4">
-          <button
-            class="text-center btn btn-gradient btn-accent w-full md:w-[280px] md:h-[50px] w-[160px] h-[50px] rounded-2xl text-white"
-          >
-            Talk with me
-          </button>
-          <button
-            class="text-center btn btn-gradient btn-accent w-full md:w-[280px] md:h-[50px] w-[160px] h-[50px] rounded-2xl text-white border !border-white !bg-transparent"
-          >
-            Resrources
-          </button>
-        </div>
+
         <div class="cards grid grid-cols-1 md:grid-cols-2 gap-4">
           <!-- Blog Card -->
           <div
             class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
           >
-            <a href="blog-details.html">
+            <a href="#">
               <img
                 src="../src/image/Frame-blogs.png"
-                class="p-2"
+                class="py-2 px-1"
                 alt="Course1"
               />
               <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
@@ -221,148 +315,10 @@
           <div
             class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
           >
-            <a href="blog-details.html">
+            <a href="#">
               <img
                 src="../src/image/Frame-blogs.png"
-                class="p-2"
-                alt="Course1"
-              />
-              <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
-                Creative landing page
-              </h4>
-              <div
-                class="text-blog flex items-center md:ml-5 ml-2 p-2 text-left"
-              >
-                <p class="text-gray-700">Read more</p>
-                <p class="text-gray-700">
-                  <img src="../src/image/Frame.svg" class="ml-2" alt="arrow" />
-                </p>
-              </div>
-            </a>
-          </div>
-          <!-- Blog Card -->
-          <div
-            class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
-          >
-            <a href="blog-details.html">
-              <img
-                src="../src/image/Frame-blogs.png"
-                class="p-2"
-                alt="Course1"
-              />
-              <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
-                Creative landing page
-              </h4>
-              <div
-                class="text-blog flex items-center md:ml-5 ml-2 p-2 text-left"
-              >
-                <p class="text-gray-700">Read more</p>
-                <p class="text-gray-700">
-                  <img src="../src/image/Frame.svg" class="ml-2" alt="arrow" />
-                </p>
-              </div>
-            </a>
-          </div>
-          <!-- Blog Card -->
-          <div
-            class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
-          >
-            <a href="blog-details.html">
-              <img
-                src="../src/image/Frame-blogs.png"
-                class="p-2"
-                alt="Course1"
-              />
-              <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
-                Creative landing page
-              </h4>
-              <div
-                class="text-blog flex items-center md:ml-5 ml-2 p-2 text-left"
-              >
-                <p class="text-gray-700">Read more</p>
-                <p class="text-gray-700">
-                  <img src="../src/image/Frame.svg" class="ml-2" alt="arrow" />
-                </p>
-              </div>
-            </a>
-          </div>
-          <!-- Blog Card -->
-          <div
-            class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
-          >
-            <a href="blog-details.html">
-              <img
-                src="../src/image/Frame-blogs.png"
-                class="p-2"
-                alt="Course1"
-              />
-              <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
-                Creative landing page
-              </h4>
-              <div
-                class="text-blog flex items-center md:ml-5 ml-2 p-2 text-left"
-              >
-                <p class="text-gray-700">Read more</p>
-                <p class="text-gray-700">
-                  <img src="../src/image/Frame.svg" class="ml-2" alt="arrow" />
-                </p>
-              </div>
-            </a>
-          </div>
-          <!-- Blog Card -->
-          <div
-            class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
-          >
-            <a href="blog-details.html">
-              <img
-                src="../src/image/Frame-blogs.png"
-                class="p-2"
-                alt="Course1"
-              />
-              <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
-                Creative landing page
-              </h4>
-              <div
-                class="text-blog flex items-center md:ml-5 ml-2 p-2 text-left"
-              >
-                <p class="text-gray-700">Read more</p>
-                <p class="text-gray-700">
-                  <img src="../src/image/Frame.svg" class="ml-2" alt="arrow" />
-                </p>
-              </div>
-            </a>
-          </div>
-          <!-- Blog Card -->
-          <div
-            class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
-          >
-            <a href="blog-details.html">
-              <img
-                src="../src/image/Frame-blogs.png"
-                class="p-2"
-                alt="Course1"
-              />
-              <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
-                Creative landing page
-              </h4>
-              <div
-                class="text-blog flex items-center md:ml-5 ml-2 p-2 text-left"
-              >
-                <p class="text-gray-700">Read more</p>
-                <p class="text-gray-700">
-                  <img src="../src/image/Frame.svg" class="ml-2" alt="arrow" />
-                </p>
-              </div>
-            </a>
-          </div>
-          <!-- Blog Card -->
-          <div
-            class="card-blogs p-3 !bg-transparent border !border-white rounded-3xl"
-          >
-            <a href="blog-details.html">
-              <img
-                src="../src/image/Frame-blogs.png"
-                class="p-2"
+                class="py-2 px-1"
                 alt="Course1"
               />
               <h4 class="text-xl md:mx-5 mx-2 font-bold text-left my-2">
@@ -380,9 +336,9 @@
           </div>
         </div>
       </section>
-      <!-- End Section Latest Activites -->
+      <!-- End Section Latest Blogs -->
       <!-- start Section communication Shots -->
-      <section id="communication" class="w-[85%] md:py-18 py-8 mx-auto mt-10">
+      <section id="communication" class="w-[85%] md:py-18 py-8 mx-auto md:mt-4">
         <div
           class="flex flex-col md:flex-row md:justify-between gap-8 md:gap-12 py-6 px-8 bg-[#171717] rounded-2xl"
         >
@@ -458,7 +414,7 @@
     </main>
     <!-- Start Footer -->
     <footer x-data="{ open: false }" class="w-full">
-      <hr />
+      <hr  />
       <!-- Desktop Footer -->
       <div
         class="hidden md:flex max-w-7xl mx-auto px-6 py-6 items-center justify-between"

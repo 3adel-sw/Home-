@@ -164,58 +164,144 @@
     <!-- End Page Header  -->
     <main></main>
     <!-- Start Footer -->
-    <footer class="w-full mx-auto">
-      <hr class="py-8 w-full h-0.5" />
-      <div class="max-w-7xl mx-auto px-6 py-6">
-        <div class="flex items-center mx-8 justify-between">
-          <!-- Logo -->
-          <div class="flex items-center gap-2 w-40 text-lg font-medium">
-            <img
-              src="../src/image/logo-bottom.png"
-              class="w-full h-full"
-              alt="logo-bottom"
-              loading="lazy"
-            />
+    <!-- Start Footer -->
+    <footer x-data="{ open: false }" class="w-full">
+      <hr />
+      <!-- Desktop Footer -->
+      <div
+        class="hidden md:flex max-w-7xl mx-auto px-6 py-6 items-center justify-between"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-2 w-40 text-lg font-medium">
+          <img
+            src="src/image/logo-bottom.png"
+            class="w-full h-full"
+            alt="logo-bottom"
+          />
+        </div>
+
+        <!-- Navigation -->
+        <nav class="flex gap-8 text-base text-gray-400">
+          <a href="../index.html" class="hover:text-white transition">Home</a>
+          <a href="#" class="hover:text-white transition">About</a>
+          <a href="academy.html" class="hover:text-white transition">Academy</a>
+          <a href="services.html" class="hover:text-white transition"
+            >Services</a
+          >
+          <a href="contact.html" class="hover:text-white transition">Contact</a>
+          <a href="blog.html" class="hover:text-white transition">Blog</a>
+          <a href="projects.html" class="hover:text-white transition"
+            >Projects</a
+          >
+        </nav>
+
+        <!-- Right action -->
+        <div class="flex items-center gap-4">
+          <span class="text-xs text-gray-500"> © 2025 Ayman Taher </span>
+          <button
+            class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center hover:bg-emerald-400 transition"
+          >
+            <img src="src/image/plus.svg" class="w-9" alt="plus" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Footer / Menu Button -->
+      <div class="flex md:hidden justify-between items-center px-6 py-4">
+        <!-- Logo -->
+        <img src="src/image/logo-bottom.png" alt="logo" class="w-45" />
+
+        <!-- Menu Button -->
+        <button @click="open = true">
+          <img src="src/image/menu.png" alt="menu" />
+        </button>
+
+        <!-- Fullscreen Menu -->
+        <div
+          x-show="open"
+          x-transition.opacity
+          class="fixed inset-0 z-50 bg-gradient-to-br from-[#0e0e14] to-[#15151f] flex flex-col"
+        >
+          <!-- Top Bar -->
+          <div class="flex justify-between items-center p-6">
+            <img src="src/image/logo-bottom.png" alt="logo" class="w-45" />
+            <button @click="open = false" class="text-white text-2xl">
+              <img src="src/image/menu.png" alt="menu" />
+            </button>
           </div>
 
           <!-- Navigation -->
-          <nav class="hidden md:flex gap-8 text-base text-gray-400">
-            <a href="../index.html" class="hover:text-white transition">Home</a>
-            <a href="about.html" class="hover:text-white transition">About</a>
-            <a href="academy.html" class="hover:text-white transition"
-              >Academy</a
-            >
-            <a href="services.html" class="hover:text-white transition"
-              >Services</a
-            >
-            <a href="contact.html" class="hover:text-white transition"
-              >Contact</a
-            >
-          </nav>
 
-          <!-- Right action -->
-          <div class="flex items-center gap-4">
-            <span class="text-xs text-gray-500 hidden sm:block">
-              © 2025 Ayman Taher
-            </span>
-
-            <button
-              class="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center hover:bg-emerald-400 transition"
+          <div
+            class="m-auto w-[85%] h-[45%] top-20 flex items-center justify-center -translate-y-8 border border-[#232323] rounded-2xl bg-gradient-to-br from-[#0e0e14] to-[#15151f]"
+          >
+            <nav
+              class="text-center space-y-4 text-white text-xl md:text-2xl font-medium"
             >
-              <svg
-                class="w-4 h-4 text-black"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                viewBox="0 0 24 24"
+              <a href="../index.html" class="block text-[#14CF93]">HOME</a>
+              <a href="about.html" class="block hover:text-[#14CF93]">ABOUT</a>
+              <a href="projects.html" class="block hover:text-[#14CF93]"
+                >PROJECTS</a
               >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
+              <a href="services.html" class="block hover:text-[#14CF93]"
+                >SERVICES</a
+              >
+              <a href="academy.html" class="block hover:text-[#14CF93]"
+                >ACADEMY</a
+              >
+              <a href="blog.html" class="block hover:text-[#14CF93]"
+                >BLOGS & NEWS</a
+              >
+              <a href="contact.html" class="block hover:text-[#14CF93]"
+                >CONTACT</a
+              >
+            </nav>
+          </div>
+
+          <!-- Bottom Buttons & Social -->
+          <div class="flex flex-col items-center gap-4 mt-auto mb-12 px-6">
+            <div class="flex gap-3">
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center opacity-75 hover:opacity-100"
+                >in</a
+              >
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center opacity-75 hover:opacity-100"
+                >𝕏</a
+              >
+              <a
+                href="#"
+                class="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center opacity-75 hover:opacity-100"
+                >◎</a
+              >
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row gap-3 mt-4 w-full justify-center"
+            >
+              <a href="#" class="w-full sm:w-40">
+                <button
+                  class="btn btn-gradient btn-accent bg-[#14CF93] w-full h-12 rounded-3xl text-white text-center"
+                >
+                  Start a New Project
+                </button>
+              </a>
+              <a href="#" class="w-full sm:w-40">
+                <button
+                  class="btn btn-gradient btn-accent !bg-white border !border-white w-full h-12 rounded-3xl text-black text-center"
+                >
+                  Book Appointment
+                </button>
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- End Footer  -->
     <!-- End Footer  -->
     <!--  -->
     <!-- FlyOnUI - defer to avoid render blocking -->
