@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
+
+# Sitemap location (will create soon)
+Sitemap: https://aymantaher.com/sitemap.xml

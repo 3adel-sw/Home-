@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home Page</title>
+    <meta
+      name="description"
+      content="Transform your career and financial life with personalized coaching. 3 & 6 Month Programs for Growth, Stability & Identity."
+    />
+    <meta
+      name="keywords"
+      content="career coaching, financial planning, personal development, career guidance"
+    />
+    <meta name="theme-color" content="#14CF93" />
+    <title>Home Page - Ayman Taher Coaching</title>
+    <!-- Critical CSS - Inline for faster rendering -->
     <link href="src/output.css" rel="stylesheet" />
     <!-- Performance: Preconnect to CDN domains -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
     <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
-    <!-- Critical CSS -->
-    <link
-      rel="preload"
-      href="src/output.css"
-      as="style"
-      onload="this.rel = 'stylesheet'"
-    />
-    <noscript><link rel="stylesheet" href="src/output.css" /></noscript>
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="src/image/hero.png" />
+    <link rel="preload" as="image" href="src/image/main-block.png" />
     <!-- Splide CSS with preload -->
     <link
       rel="preload"
@@ -26,14 +31,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
     />
-    <!-- Font -->
-    <link
-      rel="stylesheet"
-      href="../src/fonts/fonnts.com-Degular_Variable.otf"
-    />
     <!-- AlpineJs with defer for non-blocking -->
     <script
       defer
+      crossorigin
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
   </head>
@@ -42,7 +43,7 @@
     <header class="w-full p-4 relative z-50">
       <div class="mx-6 flex items-center justify-between">
         <!-- Logo -->
-        <img src="src/image/logo.png" alt="logo" class="" />
+        <img src="src/image/logo.png" alt="logo" class="" loading="eager" />
 
         <!-- Menu -->
         <div
@@ -181,7 +182,7 @@
           <img
             src="src/image/main-block.png"
             class="w-full"
-            loading="lazy"
+            fetchpriority="high"
             alt="main-block"
           />
         </div>
@@ -196,7 +197,10 @@
             <img
               src="src/image/hero.png"
               alt="image hero"
-              loading="lazy"
+              width="400"
+              height="500"
+              fetchpriority="high"
+              sizes="(max-width: 768px) 100vw, 40vw"
               class="w-full h-full object-cover"
             />
           </div>
@@ -208,6 +212,7 @@
             <img
               src="src/image/Arrowbut.svg"
               alt="hero"
+              loading="lazy"
               class="absolute right-6"
             />
             <h2
@@ -391,7 +396,11 @@
                 class="flex items-star md:mt-28 mt-8 text-center btn btn-gradient btn-accent w-[200px] h-[65px] rounded-4xl text-white"
               >
                 <a href="layer/project-details.html"> View Case Study </a>
-                <img src="../src/image/Arrowbut.svg" alt="Arrowbut" />
+                <img
+                  src="../src/image/Arrowbut.svg"
+                  alt="Arrowbut"
+                  loading="lazy"
+                />
               </button>
             </div>
 
@@ -436,7 +445,11 @@
                 class="flex items-star md:mt-28 mt-8 text-center btn btn-gradient btn-accent w-[200px] h-[65px] rounded-4xl text-white"
               >
                 <a href="layer/project-details.html"> View Case Study </a>
-                <img src="../src/image/Arrowbut.svg" alt="Arrowbut" />
+                <img
+                  src="../src/image/Arrowbut.svg"
+                  alt="Arrowbut"
+                  loading="lazy"
+                />
               </button>
             </div>
 
@@ -481,7 +494,11 @@
                 class="flex items-star md:mt-28 mt-8 text-center btn btn-gradient btn-accent w-[200px] h-[65px] rounded-4xl text-white"
               >
                 <a href="layer/project-details.html"> View Case Study </a>
-                <img src="../src/image/Arrowbut.svg" alt="Arrowbut" />
+                <img
+                  src="../src/image/Arrowbut.svg"
+                  alt="Arrowbut"
+                  loading="lazy"
+                />
               </button>
             </div>
 
@@ -537,7 +554,11 @@
                   class="flex items-star md:mt-28 mt-8 text-center btn btn-gradient btn-accent w-[200px] h-[65px] rounded-4xl text-white"
                 >
                   <a href="layer/project-details.html"> View Case Study </a>
-                  <img src="../src/image/Arrowbut.svg" alt="Arrowbut" />
+                  <img
+                    src="../src/image/Arrowbut.svg"
+                    alt="Arrowbut"
+                    loading="lazy"
+                  />
                 </button>
               </div>
 
@@ -581,7 +602,11 @@
                   class="flex items-star md:mt-28 mt-8 text-center btn btn-gradient btn-accent w-[200px] h-[65px] rounded-4xl text-white"
                 >
                   <a href="layer/project-details.html"> View Case Study </a>
-                  <img src="../src/image/Arrowbut.svg" alt="Arrowbut" />
+                  <img
+                    src="../src/image/Arrowbut.svg"
+                    alt="Arrowbut"
+                    loading="lazy"
+                  />
                 </button>
               </div>
               <!-- Img   -->
@@ -929,6 +954,7 @@
               <img
                 src="src/image/Group1.png"
                 class="w-full h-full"
+                loading="lazy"
                 alt="Group1"
               />
             </div>
@@ -951,6 +977,7 @@
               <img
                 src="src/image/Group-blogs.png"
                 class="w-full h-full"
+                loading="lazy"
                 alt="Group-blogs"
               />
             </div>
@@ -971,11 +998,13 @@
               <img
                 src="src/image/Group-podcast.png"
                 class="w-full h-full"
+                loading="lazy"
                 alt="Group-podcast"
               />
               <img
                 src="src/image/Group-play.png"
                 class="w-52 items-center mx-auto"
+                loading="lazy"
                 alt="Group-play"
               />
             </div>
@@ -995,10 +1024,20 @@
         </h2>
         <div class="cards flex flex-col gap-4 md:flex-row">
           <div class="card-some">
-            <img src="src/image/some-home1.png" class=" " alt="some-home1" />
+            <img
+              src="src/image/some-home1.png"
+              class=" "
+              loading="lazy"
+              alt="some-home1"
+            />
           </div>
           <div class="card-some">
-            <img src="src/image/some-home1.png" class=" " alt="some-home1" />
+            <img
+              src="src/image/some-home1.png"
+              class=" "
+              loading="lazy"
+              alt="some-home1"
+            />
           </div>
         </div>
       </section>
@@ -1046,6 +1085,7 @@
                 <img
                   src="src/image/Envelope.svg"
                   class="w-6 h-6"
+                  loading="lazy"
                   alt="Envelope"
                 />
               </div>
@@ -1065,6 +1105,7 @@
                 <img
                   src="src/image/PhoneCall.svg"
                   class="w-6 h-6"
+                  loading="lazy"
                   alt="PhoneCall"
                 />
               </div>
@@ -1080,7 +1121,7 @@
     </main>
     <!-- Start Footer  -->
     <footer x-data="{ open: false }" class="w-full">
-      <hr class="py-4 w-full h-0.5" />
+      <hr />
       <!-- Desktop Footer -->
       <div
         class="hidden md:flex max-w-7xl mx-auto px-6 py-6 items-center justify-between"
@@ -1228,6 +1269,6 @@
     <!-- FlyOnUI - defer to avoid render blocking -->
     <script defer src="node_modules/flyonui/flyonui.js"></script>
     <!--script  -->
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </body>
 </html>

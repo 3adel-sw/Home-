@@ -17,6 +17,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* Performance: Optimize animated elements */
+[x-data] {
+  will-change: auto;
+}
+[x-show] {
+  will-change: opacity;
+}
 /* 
 .head-hero {
   background: linear-gradient(to right, #190101, #000000, #010b17);
