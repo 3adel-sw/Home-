@@ -1,3 +1,7 @@
+// AOS
+AOS.init();
+
+
 const slider = document.getElementById("slider");
 const prevBtn = document.querySelector("button[onclick='prevSlide()']");
 const nextBtn = document.querySelector("button[onclick='nextSlide()']");
